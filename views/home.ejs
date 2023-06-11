@@ -1,0 +1,832 @@
+<%- include("partials/header") -%>
+
+<header class="pb-3 mb-4 border-bottom">
+  <a
+    href="/"
+    class="d-flex align-items-center text-body-emphasis text-decoration-none"
+  >
+    <span class="fs-4" style="color: #adb5bd"
+      >Made with ❤️ from Mohammed Taha</span
+    >
+  </a>
+</header>
+
+<div class="p-5 mb-4 rounded-3" style="background-color: #2b3035">
+  <div class="container-fluid py-5">
+    <h1 aria-label="Data Structures Experiments" class="display-5 fw-bold">
+      Data Structures&nbsp;<span class="typewriter"></span>
+      <style>
+        h1 {
+          font-size: 9vmin;
+          /* color: #8bf; */
+          /* text-align: left; */
+          /* font-family: Lato, sans-serif; */
+          /* font-weight: 700; */
+          margin-bottom: 2rem;
+        }
+
+        /* Typewriter effect 1 */
+        @keyframes typing {
+          0.0000%,
+          27.3488% {
+            content: "";
+          }
+          1.1395%,
+          26.2093% {
+            content: "E";
+          }
+          2.2791%,
+          25.0698% {
+            content: "Ex";
+          }
+          3.4186%,
+          23.9302% {
+            content: "Exp";
+          }
+          4.5581%,
+          22.7907% {
+            content: "Expe";
+          }
+          5.6977%,
+          21.6512% {
+            content: "Exper";
+          }
+          6.8372%,
+          20.5116% {
+            content: "Experi";
+          }
+          7.9767%,
+          19.3721% {
+            content: "Experim";
+          }
+          9.1163%,
+          18.2326% {
+            content: "Experime";
+          }
+          10.2558%,
+          17.0930% {
+            content: "Experimen";
+          }
+          11.3953%,
+          15.9535% {
+            content: "Experiments";
+          }
+
+          30.7674%,
+          51.2791% {
+            content: "";
+          }
+          31.9070%,
+          50.1395% {
+            content: "I";
+          }
+          33.0465%,
+          49.0000% {
+            content: "In";
+          }
+          34.1860%,
+          47.8605% {
+            content: "In P";
+          }
+          35.3256%,
+          46.7209% {
+            content: "In Py";
+          }
+          36.4651%,
+          45.5814% {
+            content: "In Pyt";
+          }
+          37.6047%,
+          44.4419% {
+            content: "In Pyth";
+          }
+          38.6977%,
+          43.2093% {
+            content: "In Pytho";
+          }
+          39.8372%,
+          42.0698% {
+            content: "In Python";
+          }
+        }
+
+        @keyframes blink {
+          0%,
+          100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0;
+          }
+        }
+
+        .typewriter {
+          --caret: currentcolor;
+        }
+
+        .typewriter::before {
+          content: "";
+          animation: typing 8.2s infinite;
+        }
+
+        .typewriter::after {
+          content: "";
+          border-right: 1px solid var(--caret);
+          animation: blink 0.5s linear infinite;
+        }
+
+        .typewriter.thick::after {
+          border-right: 1ch solid var(--caret);
+        }
+
+        .typewriter.nocaret::after {
+          border-right: 0;
+        }
+
+        @media (prefers-reduced-motion) {
+          .typewriter::after {
+            animation: none;
+          }
+        }
+
+        /**/
+      </style>
+    </h1>
+    <p class="col-md-8 fs-4">
+      I have simplified some of the Experiments, not all. So have a look and I
+      have explained each experiment and there are some links provided for each
+      experiment, make sure to visit them. I hope this helps you 😊.
+    </p>
+    <button class="btn btn-primary btn-lg" type="button">
+      If you're Tired, press here
+      <script>
+        document.querySelector(".btn").addEventListener("click", function () {
+          var audio = new Audio("banana-scream.mp3");
+          audio.play();
+        });
+      </script>
+    </button>
+  </div>
+</div>
+
+<div class="row align-items-md-stretch">
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+      "
+    >
+      <h2>Experiment 01 A</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-01-a"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+      "
+    >
+      <h2>Experiment 01 B</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-01-b"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+<div class="row align-items-md-stretch">
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="box-shadow: rgba(240, 46, 170, 0.4) 0px 5px 25px"
+    >
+      <h2>Experiment 02</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-02"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+<div class="row align-items-md-stretch">
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+      "
+    >
+      <h2>Experiment 03 A</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-03-a"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+      "
+    >
+      <h2>Experiment 03 B</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-03-b"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<br />
+<div class="row align-items-md-stretch">
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+      "
+    >
+      <h2>Experiment 04 A</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-04-a"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+      "
+    >
+      <h2>Experiment 04 B</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-04-b"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+      "
+    >
+      <h2>Experiment 04 C</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-04-c"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+<div class="row align-items-md-stretch">
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="box-shadow: rgba(240, 46, 170, 0.4) 0px 5px 25px"
+    >
+      <h2>Experiment 05</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-05"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+<div class="row align-items-md-stretch">
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="box-shadow: rgba(240, 46, 170, 0.4) 0px 5px 25px"
+    >
+      <h2>Experiment 06</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-06"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+<div class="row align-items-md-stretch">
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+      "
+    >
+      <h2>Experiment 07 A</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-07-a"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+      "
+    >
+      <h2>Experiment 07 B</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-07-b"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<br />
+<div class="row align-items-md-stretch">
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+      "
+    >
+      <h2>Experiment 08 A</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-08-a"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+      "
+    >
+      <h2>Experiment 08 B</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-08-b"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<br />
+<div class="row align-items-md-stretch">
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+      "
+    >
+      <h2>Experiment 09 A</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-09-a"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+      "
+    >
+      <h2>Experiment 09 B</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-09-b"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<br />
+<div class="row align-items-md-stretch">
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+      "
+    >
+      <h2>Experiment 10 A</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-10-a"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+      "
+    >
+      <h2>Experiment 10 B</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-10-b"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+<div class="row align-items-md-stretch">
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="box-shadow: rgba(240, 46, 170, 0.4) 0px 5px 25px"
+    >
+      <h2>Experiment 11</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-11"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+<div class="row align-items-md-stretch">
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+      "
+    >
+      <h2>Experiment 12 A</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-12-a"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+      "
+    >
+      <h2>Experiment 12 B</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-primary"
+          value="experiment-12-b"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+<div class="row align-items-md-stretch">
+  <div class="col-md-6 mb-4">
+    <div
+      class="h-100 p-5 text-bg-dark border rounded-3"
+      style="box-shadow: rgba(240, 46, 170, 0.4) 0px 5px 25px"
+    >
+      <h2>Experiment 13</h2>
+      <p>
+        Or, keep it light and add a border for some added definition to the
+        boundaries of your content. Be sure to look under the hood at the source
+        HTML here as we've adjusted the alignment and sizing of both column's
+        content for equal-height.
+      </p>
+      <form action="/" method="post">
+        <button
+          class="btn btn-outline-info"
+          value="experiment-13"
+          name="button"
+          type="submit"
+        >
+          Example button
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer") -%>
