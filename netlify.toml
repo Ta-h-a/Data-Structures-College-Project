@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "14"
+
+[build.plugins]
+  # Add any additional build plugins or configuration here if required
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
