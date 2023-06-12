@@ -61,17 +61,118 @@ const experiments = [
       </ul>
     </div><br>
         `,
-        videoLink: "https://www.youtube.com/embed/aCVpMz7_gn8",
+        videoLink: `
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/C_XRxLPGbUw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        `,
         link1: 'https://www.geeksforgeeks.org/make-simple-calculator-using-python/',
         link2: 'https://www.programiz.com/python-programming/examples/calculator'
     },
     {
         name: "experiment-01-b",
-        link: "https://drive.google.com/file/d/1aXcHFUsWCKe9dfQqBFc6kdbdeAOQ18oj/preview"
+        description: "This code demonstrates a basic implementation of a stack data structure using Python. A stack follows the last-in, first-out (LIFO) principle, where elements are added and removed from the top of the stack.",
+        codeLink: "https://drive.google.com/file/d/1J7GltoJtyNslyBDZZfzywmuuZ701w1Ox/preview",
+        explanation: `
+        <div class="container">
+        <div class="row">
+          <div class="col">
+            <h3>Explanation:</h3>
+            <p class="lead">
+              The code begins by initializing an empty stack, represented by a Python list called stack. This list will store the elements of the stack. Additionally, the code prompts the user to enter the size limit of the stack, which determines the maximum number of elements it can hold.
+            </p>
+            <p class="lead">
+              Next, the code enters a loop that allows the user to perform three operations: push, pop, or quit.
+            </p>
+            <p class="lead">
+              Push Operation: If the user selects the push operation, the code checks if the length of the stack is equal to the size limit. If it is, it means the stack is full, and the code displays a message indicating that the list is full. Otherwise, the code prompts the user to input an element to be added to the stack. This element is then appended to the end of the stack using the append() method. Finally, the updated stack is displayed.
+            </p>
+            <p class="lead">
+              Pop Operation: If the user chooses the pop operation, the code first checks if the stack is empty. This is done by evaluating the truthiness of the stack list. If it is empty, it means there are no elements in the stack, and the code displays a message indicating that the stack is empty. Otherwise, the code removes the topmost element from the stack using the pop() method, which eliminates the last element of the list. The popped element is stored in a variable called 'e' for reference. The code then displays the removed element and the updated stack.
+            </p>
+            <p class="lead">
+              Quit Operation: If the user selects the quit operation, the loop breaks, and the program terminates.
+            </p>
+            <p class="lead">
+              If the user enters an invalid choice that does not correspond to any of the available operations, the code displays a message indicating that the correct operation should be entered.
+            </p>
+            <p class="lead">
+              Overall, this code allows users to interact with a stack data structure by adding elements to the top of the stack (push), removing elements from the top (pop), or quitting the program. It provides a practical demonstration of how stacks work and can be used as a foundation for more complex stack-based applications.
+            </p>
+          </div>
+        </div>
+      </div>
+        `,
+        videoLink: `
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/aCVpMz7_gn8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        `,
+        link1: "https://www.studytonight.com/data-structures/stack-using-linked-list",
+        link2: "https://www.geeksforgeeks.org/stack-data-structure/",
     },
     {
         name: "experiment-02",
-        link: "https://drive.google.com/file/d/1aXcHFUsWCKe9dfQqBFc6kdbdeAOQ18oj/preview"
+        description: "checkPair and countFreq. The checkPair function checks an array for a pair of elements that add up to a given target sum. If a valid pair is found, it is displayed as output. The countFreq function counts the frequency of each element in an array and prints the element along with its count.",
+        codeLink: "https://drive.google.com/file/d/1Bs4qDlrPPsxlpY1s8fAiidFjIjaK-DmA/preview",
+        explanation: `
+        <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>checkPair:</h2>
+            <p class="lead">
+              The checkPair function takes three parameters: A (the array), size (the size of the array), and x (the target sum).
+              It uses a nested loop structure to iterate through all possible pairs of elements in the array.
+            </p>
+            <p class="lead">
+              <strong>Outer loop:</strong> The outer loop, controlled by the variable i, iterates from the first element to the second-to-last element of the array.
+            </p>
+            <p class="lead">
+              <strong>Inner loop:</strong> The inner loop, controlled by the variable j, iterates from the next element after i to the last element of the array.
+            </p>
+            <p class="lead">
+              For each pair of elements, the code checks if their sum is equal to the target sum (x).
+              If a pair with the given sum is found, it is displayed as output, indicating that a valid pair exists.
+              The function then returns 1 to indicate the presence of a valid pair. If no pair is found, it returns 0.
+            </p>
+            <h2>countFreq:</h2>
+            <p class="lead">
+              The countFreq function takes two parameters: arr (the array) and n (the length of the array).
+              It initializes a boolean array called visited with False values for each element in the array.
+            </p>
+            <p class="lead">
+              The function iterates through the array using a loop controlled by the variable i.
+              For each element in the array, it checks if it has been visited previously. If so, it continues to the next element.
+            </p>
+            <p class="lead">
+              If the element has not been visited, it initializes a counter variable count to 1 and enters a nested loop controlled by the variable j.
+              In the nested loop, it compares the element at index i with the remaining elements in the array (starting from i+1).
+              If a match is found, it increments the counter count and marks the corresponding element as visited by setting the value in the visited array to True.
+            </p>
+            <p class="lead">
+              Finally, it prints the element and its corresponding frequency (count) as output.
+            </p>
+            <h2>Main code:</h2>
+            <p class="lead">
+              An array <code>array</code> and a target sum x are defined.
+            </p>
+            <p class="lead">
+              The checkPair function is called with the array, the length of the array (len(array)), and the target sum as arguments.
+              If the function returns 1 (indicating a valid pair exists), it prints a message confirming the presence of a valid pair for the given target sum. Otherwise, it prints a message indicating that no valid pair exists.
+            </p>
+            <p class="lead">
+              Similarly, an array arr is defined, and the countFreq function is called with the array and the length of the array as arguments.
+              The function counts the frequency of each element in the array and prints the element along with its count.
+            </p>
+            <p class="lead">
+              Overall, this code provides detailed functionality to check for a pair with a given sum in an array and count the frequencies of elements in an array.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+        `,
+        videoLink: `
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yzNOhldYSBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        `,
+        link1: "https://codezup.com/program-to-find-pair-with-the-given-sum-in-an-array/",
+        link2: "https://www.tutorialspoint.com/count-frequencies-of-all-elements-in-array-in-python",
     },
     {
         name: "experiment-03-a",

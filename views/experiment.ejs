@@ -33,7 +33,7 @@
 
     <br>
     <div class="youtube-video-container">
-      <iframe width="560" height="315" src="<%=videoLink%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <%- videoLink %>
       <style>
         .youtube-video-container {
   position: relative;
@@ -57,9 +57,8 @@
       </style>
     </div>    
     <br>
-
     <form>
-        <button class="btn btn-outline-primary anotherTabButton" name="button"  type="button">Pratice here</button>
+        <button class="btn btn-outline-primary anotherTabButton" name="button"  type="button">Practice here</button>
         <script>
           document.querySelector(".anotherTabButton").addEventListener("click",function(){
             window.open("https://www.programming-hero.com/code-playground/python/index.html")
