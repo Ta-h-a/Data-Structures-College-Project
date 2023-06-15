@@ -1,82 +1,111 @@
 <%- include("partials/header") %>
 
-<header class="pb-3 mb-4 border-bottom">
-  </header>
+<header class="pb-3 mb-4 border-bottom"></header>
 
-  <div class="p-5 mb-4 rounded-3" style="background-color: #2b3035;">
-    <div class="container-fluid py-5">
-      <h1 class="display-5 fw-bold"><%= title %></h1>
-      <p class="col-md-8 fs-4">
-        <%= description %>
-      </p>
-    </div>
+<div class="p-5 mb-4 rounded-3" style="background-color: #2b3035">
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold"><%= title %></h1>
+    <p class="col-md-8 fs-4"><%= description %></p>
   </div>
+</div>
 
+<div
+  class="h-100 p-5 border rounded-3"
+  style="color: black; background-color: #f5f5f7"
+>
+  <h2><%= title %></h2>
+  <br />
+  <p
+    class="codepen"
+    data-height="500"
+    data-slug-hash="<%= dataHash %>"
+    data-user="Ta-h-a"
+    style="
+      height: 300px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid;
+      margin: 1em 0;
+      padding: 1em;
+    "
+  >
+    <span
+      >See the Pen
+      <a href="<%= codeLink %>"><%= title %></a> by Mohammed
+      Taha (<a href="https://codepen.io/Ta-h-a">@Ta-h-a</a>) on
+      <a href="https://codepen.io">CodePen</a>.</span
+    >
+  </p>
+  <script
+    async
+    src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+  ></script>
+  <br />
+  <p style="text-align: center;">Scroll and run the program</p>
+  <br />
+  <br />
+  <%- explanation %>
 
-<div class="h-100 p-5 border rounded-3" style="color: black; background-color: #f5f5f7;">
+  <br />
+  <h2>Check out this Video</h2>
 
-    <h2><%= title %></h2>
-    <br>
-    <iframe src="<%=codeLink%>" width="100%" height="480" allow="autoplay"  style="width:100%;
-      height:410px; 
-      border:5px groove #000115;
-      border-radius:25px;"></iframe>
-      <br>
-      <br>
-      <br>
-      <%- explanation %>
-
-
-
-    <br>
-    <h2>Check out this Video</h2>
-
-    <br>
-    <div class="youtube-video-container">
+  <br />
+  <div class="youtube-video-container">
     <%- videoLink %>
-      <style>
-        .youtube-video-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
+    <style>
+      .youtube-video-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+      }
 
-.youtube-video-container::after {
-  display: block;
-  content: "";
-  padding-top: 56.25%;
-}
+      .youtube-video-container::after {
+        display: block;
+        content: "";
+        padding-top: 56.25%;
+      }
 
-.youtube-video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-      </style>
-    </div>    
-    <br>
-    <form>
-        <button class="btn btn-outline-primary anotherTabButton" name="button"  type="button">Practice here</button>
-        <script>
-          document.querySelector(".anotherTabButton").addEventListener("click",function(){
-            window.open("https://www.programming-hero.com/code-playground/python/index.html")
-          })
-        </script>
-    </form>
-<br>
-<br>
-    <h2>Recommended Resources</h2>
-    <ul class="list-group">
-      <li class="list-group-item list-group-item-info">Visit: <a href="<%= link1 %>"  target="_blank"><%= link1 %></a></li>
-      <li class="list-group-item list-group-item-info">Visit: <a href="<%= link2 %>"  target="_blank"><%= link2 %></a></li>
-    </ul>
+      .youtube-video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </div>
-
-  
-
-
-
+  <br />
+  <form>
+    <button
+      class="btn btn-outline-primary anotherTabButton"
+      name="button"
+      type="button"
+    >
+      Practice here
+    </button>
+    <script>
+      document
+        .querySelector(".anotherTabButton")
+        .addEventListener("click", function () {
+          window.open(
+            "https://www.programming-hero.com/code-playground/python/index.html"
+          );
+        });
+    </script>
+  </form>
+  <br />
+  <br />
+  <h2>Recommended Resources</h2>
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-info">
+      Visit: <a href="<%= link1 %>" target="_blank"><%= link1 %></a>
+    </li>
+    <li class="list-group-item list-group-item-info">
+      Visit: <a href="<%= link2 %>" target="_blank"><%= link2 %></a>
+    </li>
+  </ul>
+</div>
 
 <%- include("partials/footer") %>
