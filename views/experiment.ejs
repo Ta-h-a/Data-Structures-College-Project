@@ -5,9 +5,34 @@
 <div class="p-5 mb-4 rounded-3" style="background-color: #2b3035">
   <div class="container-fluid py-5">
     <h1 class="display-5 fw-bold"><%= title %></h1>
-    <p class="col-md-8 fs-4"><%= description %></p>
+    <br>
+    <p class="fs-4"><%= description %></p>
   </div>
 </div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    function modifyClasses() {
+      var isPhone = window.matchMedia('(max-width: 576px)').matches;
+
+      if (isPhone) {
+        document.querySelector('.p-5').classList.add('p-3');
+        document.querySelector('.p-5').classList.remove('p-5');
+        document.querySelector('.mb-4').classList.add('mb-3');
+        document.querySelector('.mb-4').classList.remove('mb-4');
+        document.querySelector('.container-fluid').classList.add('py-3');
+        document.querySelector('.container-fluid').classList.remove('py-5');
+
+      }
+    }
+
+    // Call the function initially
+    modifyClasses();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', modifyClasses);
+  });
+</script>
 
 <div
   class="h-100 p-5 border rounded-3"
@@ -42,6 +67,25 @@
     async
     src="https://cpwebassets.codepen.io/assets/embed/ei.js"
   ></script>
+  <style>
+    @media (max-width: 576px) {
+      .codepen {
+        height: 200px;
+        padding: 0.5em;
+        font-size: 14px;
+      }
+    }
+  
+    @media (min-width: 577px) and (max-width: 768px) {
+      .codepen {
+        height: 300px;
+        padding: 0.75em;
+        font-size: 16px;
+      }
+    }
+  
+    /* Add more media queries as per your requirements for larger screens */
+  </style>
   <br />
   <p style="text-align: center;">Scroll and run the program</p>
   <br />
@@ -54,28 +98,24 @@
   <br />
   <div class="youtube-video-container">
     <%- videoLink %>
-    <style>
-      .youtube-video-container {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-      }
-
-      .youtube-video-container::after {
-        display: block;
-        content: "";
-        padding-top: 56.25%;
-      }
-
-      .youtube-video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-    </style>
   </div>
+  
+  <style>
+    .youtube-video-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%; /* Maintain a 16:9 aspect ratio */
+    }
+  
+    .youtube-video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>  
   <br />
   <form>
     <button
@@ -100,12 +140,24 @@
   <h2>Recommended Resources</h2>
   <ul class="list-group">
     <li class="list-group-item list-group-item-info">
-      Visit: <a href="<%= link1 %>" target="_blank"><%= link1 %></a>
+      Visit:
+      <a href="<%= link1 %>" target="_blank" class="responsive-link"><%= link1 %></a>
     </li>
     <li class="list-group-item list-group-item-info">
-      Visit: <a href="<%= link2 %>" target="_blank"><%= link2 %></a>
+      Visit:
+      <a href="<%= link2 %>" target="_blank" class="responsive-link"><%= link2 %></a>
     </li>
   </ul>
+  
+  <style>
+    .responsive-link {
+      word-wrap: break-word;
+      max-width: 100%;
+      display: inline-block;
+      overflow-wrap: break-word;
+    }
+  </style>
+  
 </div>
 
 <%- include("partials/footer") %>

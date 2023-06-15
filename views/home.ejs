@@ -11,8 +11,98 @@
   </a>
 </header>
 
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    function modifyClasses() {
+      var isPhone = window.matchMedia('(max-width: 576px)').matches;
+
+      if (isPhone) {
+        document.querySelector('.p-5').classList.add('p-4');
+        document.querySelector('.p-5').classList.remove('p-5');
+        document.querySelector('.mb-4').classList.add('mb-3');
+        document.querySelector('.mb-4').classList.remove('mb-4');
+        document.querySelector('.container-fluid').classList.add('py-3');
+        document.querySelector('.container-fluid').classList.remove('py-5');
+
+      }
+    }
+
+    // Call the function initially
+    modifyClasses();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', modifyClasses);
+  });
+</script>
+
+
+<style>
+  body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+  }
+
+  .alert {
+    position: relative;
+    padding: 20px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    max-width: 90%;
+    width: 400px;
+    text-align: center;
+    backdrop-filter: none;
+  }
+
+  .btn {
+    margin-top: 10px;
+  }
+</style>
+
+<div class="overlay">
+  <div class="alert" id="alertDiv">
+    ❤️ Welcome ❤️
+    <br>
+    Optimal experience: Please use a laptop or PC for coding experiments as the site is not optimized for phone screens. Remember, coding on a phone is like trying to fit an elephant into a phone booth—it's just not a good fit! Thank you!
+    <br>
+    <button type="button" class="btn btn-primary" id="hideAlertBtn">OK</button>
+  </div>
+</div>
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    var overlay = document.querySelector('.overlay');
+    var alertDiv = document.getElementById('alertDiv');
+    var hideAlertBtn = document.getElementById('hideAlertBtn');
+
+    overlay.style.display = 'flex';
+    alertDiv.style.display = 'block';
+
+    hideAlertBtn.addEventListener('click', function() {
+      overlay.style.display = 'none';
+    });
+  });
+</script>
+
+
+
 <div class="p-5 mb-4 rounded-3" style="background-color: #2b3035; box-shadow: rgba(240, 46, 170, 0.4) 0px 14px 28px, rgba(240, 46, 170, 0.3) 0px 10px 10px;">
-  <div class="container-fluid py-5">
+  <div class="container-fluid py-4">
     <h1 aria-label="Data Structures Experiments" class="display-5 fw-bold">
       Data Structures<br><span class="typewriter"></span>
       <style>
@@ -152,15 +242,17 @@
         /**/
       </style>
     </h1>
-    <p class="col-md-8 fs-4">
+    <br>
+    <p class=" fs-4">
       I have simplified some of the Experiments, not all. So have a look and I
       have explained each experiment and there are some links provided for each
       experiment, make sure to visit them. I hope this helps you 😊.
     </p>
+    <br>
     <button class="btn btn-primary btn-lg" type="button">
       If you're Tired, press here
       <script>
-        document.querySelector(".btn").addEventListener("click", function () {
+        document.querySelector(".btn.btn-primary.btn-lg").addEventListener("click", function () {
           var audio = new Audio("banana-scream.mp3");
           audio.play();
         });
@@ -848,13 +940,21 @@
 <br>
 <br>
 <h2>Contact Me 😊</h2>
-  <form action="">
-    <div class="form-group">
-      <br>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-      <br>
-      <small id="emailHelp" class="form-text text-muted">You can ask me any query or buy me a cup of Coffee, I love Coffee ❤️.</small>
-    </div>
-  </form>
+<form action="mailto:tahasindoli@gmail.com" method="post" enctype="text/plain">
+  <div class="form-group">
+    <br>
+    <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <br>
+    <textarea class="form-control" name="message" rows="5" placeholder="Enter your message"></textarea>
+    <br>
+    <button type="submit" class="btn btn-primary">Contact Me</button>
+    <br>
+    <br>
+    <small id="emailHelp" class="form-text text-muted">You can ask me any query or buy me a cup of Coffee, I love Coffee ❤️.</small>
+  </div>
+</form>
+
+
+
 
 <%- include("partials/footer") -%>
