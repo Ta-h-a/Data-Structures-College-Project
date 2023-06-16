@@ -4,6 +4,48 @@ const ejs = require("ejs");
 const _ = require("lodash");
 const app = express();
 
+app.set("view engine", "ejs");
+
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
+
+app.get("/", function (req, res) {
+  res.render("home");
+});
+
+app.get("/:exp", function (req, res) {
+  let exp;
+  let reqParam = _.kebabCase(_.lowerCase(req.params.exp));
+
+  for (let i = 0; i < experiments.length; i++) {
+    if (experiments[i].name == reqParam) {
+      exp = experiments[i];
+      exp.dataHash = exp.codeLink.slice(30);
+      break;
+    }
+  }
+
+  if (exp == null) {
+    res.send("Enter the experiment which is in the syllabus");
+  }
+
+  res.render("experiment", {
+    title: _.capitalize(_.lowerCase(req.params.exp)),
+    description: exp.description,
+    explanation: exp.explanation,
+    codeLink: exp.codeLink,
+    dataHash: exp.dataHash,
+    videoLink: exp.videoLink,
+    link1: exp.link1,
+    link2: exp.link2,
+  });
+});
+
+app.post("/", function (req, res) {
+  res.redirect("/" + req.body.button);
+});
+
 const experiments = [
   {
     name: "experiment-01-a",
@@ -1667,47 +1709,6 @@ print(q.get())</code></pre>
     "https://www.geeksforgeeks.org/python-hash-method/",
   },
 ];
-
-app.set("view engine", "ejs");
-
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
-
-app.get("/", function (req, res) {
-  res.render("home");
-});
-
-app.get("/:exp", function (req, res) {
-  let exp;
-  let reqParam = _.kebabCase(_.lowerCase(req.params.exp));
-
-  for (let i = 0; i < experiments.length; i++) {
-    if (experiments[i].name == reqParam) {
-      exp = experiments[i];
-      exp.dataHash = exp.codeLink.slice(30);
-      break;
-    }
-  }
-
-  if (exp == null) {
-    res.send("Enter the experiment which is in the syllabus");
-  }
-
-  res.render("experiment", {
-    title: _.capitalize(_.lowerCase(req.params.exp)),
-    description: exp.description,
-    explanation: exp.explanation,
-    codeLink: exp.codeLink,
-    dataHash: exp.dataHash,
-    videoLink: exp.videoLink,
-    link1: exp.link1,
-    link2: exp.link2,
-  });
-});
-
-app.post("/", function (req, res) {
-  res.redirect("/" + req.body.button);
-});
 
 
 app.listen("3000", function () {
