@@ -1710,4 +1710,6 @@ app.post("/", function (req, res) {
 });
 
 
-module.exports = app;
+app.listen("3000", function () {
+  console.log("Server started on Port 3000");
+});
