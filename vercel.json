@@ -18,11 +18,5 @@
   ],
   "env": {
     "NODE_ENV": "production"
-  },
-  "rewrites": [
-    {
-      "source": "/public/(.*)",
-      "destination": "/public/$1"
-    }
-  ]
+  }
 }
