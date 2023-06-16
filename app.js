@@ -6,11 +6,10 @@ const app = express();
 
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
-app.set("banana-scream.mp3",__dirname+"/public/banana-scream.mp3")
-
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+app.use("/audio", express.static(__dirname + "/public"));
 
 app.get("/", function (req, res) {
   res.render("home");
