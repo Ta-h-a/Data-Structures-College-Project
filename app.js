@@ -28,7 +28,7 @@ app.get("/:exp", function (req, res) {
   }
 
   if (exp == null) {
-    res.send("Enter the experiment which is in the syllabus");
+    res.render("error")
   }
 
   res.render("experiment", {
