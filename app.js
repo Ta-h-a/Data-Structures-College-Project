@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use("/audio", express.static(__dirname + "/public"));
 
+
 app.get("/", function (req, res) {
   res.render("home");
 });
@@ -19,6 +20,7 @@ app.get("/:exp", function (req, res) {
   let exp;
   let reqParam = _.kebabCase(_.lowerCase(req.params.exp));
 
+  
   for (let i = 0; i < experiments.length; i++) {
     if (experiments[i].name == reqParam) {
       exp = experiments[i];
